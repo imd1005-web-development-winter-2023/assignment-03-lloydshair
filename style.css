@@ -20,7 +20,7 @@
     --colour-darkestpeachpuff: #e6896b;
   
     /* Header configuration */
-    --header-heading-colour: var(var(--colour-darkpeachpuff));
+    --header-heading-colour: var(--colour-darkpeachpuff);
   
     /* Body configuration */
     --body-default-colour: var(--colour-darkpeachpuff);
