@@ -6,50 +6,118 @@
  VARIABLES
 */
 :root {
-  /* Core colours */
-  /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
-  --colour-amaranth: #e63946;
-  --colour-peppermint: #f1faee;
-  --colour-aquaisland: #a8dadc;
-  --colour-wedgewood: #457b9d;
-  --colour-cello: #1d3557;
+    /* Core colours */
+    /* https://www.color-hex.com/color-palette/20325 */
+    /* https://www.color-hex.com/color-palette/33225 */
+    --colour-pink1: #f2b4c0;
+    --colour-pink2: #ecc0c2;
+    --colour-pink3: #f3d3c9;
+    --colour-yellow1: #fff5d6;
+    --colour-lemonade: #fbeebf;
+    --colour-peachpuff: #ffdab9;
+    --colour-darkpeachpuff: #ff9b7a;
+    --colour-lightpeachpuff: #ffede8;
+    --colour-darkestpeachpuff: #e6896b;
+  
+    /* Header configuration */
+    --header-heading-colour: var(--colour-darkpeachpuff);
+  
+    /* Body configuration */
+    --body-default-colour: var(--colour-darkpeachpuff);
+    --body-background-colour: var(--colour-lightpeachpuff);
+  }
+  
+  /*
+    PAGE / BODY
+  */
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--body-default-colour);
+    background-color: var(--body-background-colour);
+    background-image: url('images/background/Possessed\ Hunter\ Wallpaper.jpeg');
+  }
+  
+  main {
+    min-height: 100vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-  /* Header configuration */
-  --header-heading-colour: var(--colour-peppermint);
-
-  /* Body configuration */
-  --body-default-colour: var(--colour-cello);
-  --body-background-colour: var(--colour-peppermint);
-}
-
-/*
-  PAGE / BODY
-*/
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
-}
-
-main {
-  min-height: 100vh;
-
+.container{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500;
+  margin: 20px;
+  padding: 2rem 2rem;
+  transform: rotate(0deg);
+  border-radius: 10px;
+  background-color: var(--colour-lemonade);
+  box-shadow: 0px 4px 12px var(--colour-darkpeachpuff);
 }
 
-/*
-  Screen reader text utility class
-*/
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+.todo-list{
+  list-style: none;
 }
+
+[type="submit"]{
+  background: var(--colour-darkpeachpuff);
+  color: var(--colour-lightpeachpuff);
+  border-radius: 5px;
+  border:0;
+  box-shadow: 0px 3px 4px var(--colour-darkestpeachpuff);
+  transition-duration: 0.4s;
+}
+
+[type="submit"]:hover{
+  background: var(--colour-lightpeachpuff);
+  color: var(--colour-darkpeachpuff);
+  font-weight: 200;
+}
+
+.delete-all{
+  background-color: var(--colour-darkestpeachpuff);
+  color: var(--colour-lightpeachpuff);
+  border-radius: 5px;
+  border:0;
+  box-shadow: 0px 3px 4px var(--colour-darkestpeachpuff);
+  transition-duration: 0.4s;
+}
+
+.delete-all:hover{
+  background-color: var(--colour-lightpeachpuff);
+  color: var(--colour-darkestpeachpuff);
+  font-weight: 200;
+}
+
+button{
+  background-color: var(--colour-darkpeachpuff);
+  color: var(--colour-lightpeachpuff);
+  border-radius: 40px;
+  border:0;
+  box-shadow: none;
+  transition-duration: 0.4s;
+}
+
+button:hover{
+  background-color: var(--colour-lightpeachpuff);
+  color: var(--colour-darkpeachpuff);
+  font-weight: 200;
+}
+
+  /*
+    Screen reader text utility class
+  */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
